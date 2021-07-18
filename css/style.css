@@ -5,6 +5,7 @@
   --title-color: #444444;
   --red-button: #a14a27;
   --grey-color: #b9b9b9;
+  --grey-color-logo: #f5f5f4;
 }
 
 .overley {
@@ -131,7 +132,7 @@
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.7px;
-  line-height: 28px;
+  line-height: 27px;
   color: #4b4b4b;
   margin-top: 20px;
   margin-bottom: 40px;
@@ -149,4 +150,37 @@
 }
 .o-galeriji #btn-red:hover {
   background: rgba(150, 69, 36, 0.99);
+}
+
+.tri-slike {
+  margin-top: 80px;
+  padding-right: 60px;
+  padding-bottom: 230px;
+}
+
+.tri-slike img {
+  position: relative;
+  -webkit-box-shadow: -5px 3px 12px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: -5px 3px 12px 0px rgba(0, 0, 0, 0.2);
+}
+.tri-slike #img-1 {
+  top: 130px;
+  left: 90px;
+  z-index: 1000;
+}
+.tri-slike #img-3 {
+  top: 130px;
+  right: 40px;
+  z-index: 1000;
+}
+
+/* prijatelji */
+.prijatelji {
+  background: var(--grey-color-logo);
+  padding: 110px 0px;
+}
+.prijatelji img {
+}
+#prijatelji {
+  padding: 0px 40px;
 }
