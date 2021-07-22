@@ -15,10 +15,17 @@ html {
 }
 .black {
   background: var(--footer-color);
-  border-bottom: none;
+  background: rgba(0, 0, 0, 0.85);
+  /* background: #411f1e; */
+  border-bottom: none !important;
 }
 .black-logo {
   color: var(--kontakt-color);
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0px 40px 0px 40px;
 }
 /* hero */
 
@@ -87,6 +94,7 @@ html {
 }
 .btn-cta:hover {
   border: solid var(--red-button) 1px;
+  border: solid #a39a7b 1px;
   background-color: rgba(255, 255, 255, 0);
   backdrop-filter: blur(0px) brightness(100%);
   -webkit-backdrop-filter: blur(0px) brightness(100%);
@@ -159,7 +167,8 @@ html {
   -webkit-backdrop-filter: blur(0px) brightness(100%);
 }
 .o-galeriji #btn-red:hover {
-  background: rgba(150, 69, 36, 0.99);
+  background: #8b856a;
+  border: none !important;
 }
 .tri-slike {
   margin-top: 80px;
@@ -185,8 +194,6 @@ html {
 /* prijatelji */
 .prijatelji {
   background: var(--grey-color-logo);
-  background: #e4e4e4;
-
   padding: 110px 0px;
 }
 .container {
@@ -212,7 +219,6 @@ html {
   padding: 80px 0px 90px 0px;
 }
 .kontakt-div {
-  width: 293px;
 }
 .kontakt-div h3 {
   color: rgba(255, 255, 255, 0.8);
@@ -241,6 +247,7 @@ html {
 }
 #adresa a {
   color: var(--red-button);
+  color: #a39a7b;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
@@ -303,6 +310,7 @@ html {
 }
 .up a:hover {
   color: var(--red-button);
+  color: #a39a7b;
 }
 
 .hero-b,
@@ -317,15 +325,21 @@ html {
 .hero-b {
   background-image: url("../img/biografije\ hero.jpg");
 }
-.biografije {
+
+.biografije,
+.onama {
   padding: 64px 0px 120px 0px;
   background: var(--grey-color-logo);
   background-image: url("../img/zene.jpg");
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   background-position: center top;
+  background-size: cover;
 }
-.biografije h2 {
+.onama {
+  padding-bottom: 60px;
+}
+.biografije h2,
+.onama h2 {
   margin-bottom: 50px;
   font-family: var(--title-font);
   font-size: 28px;
@@ -333,7 +347,8 @@ html {
   letter-spacing: 0.7px;
   color: #444444;
 }
-.biografije p {
+.biografije p,
+.onama p {
   font-family: var(--p-font);
   font-size: 16px;
   letter-spacing: 0.7px;
@@ -341,16 +356,39 @@ html {
   line-height: 27.2px;
   color: #212121;
 }
-.mica {
+.mica,
+.kuca-katica {
   margin-bottom: 50px;
 }
 .mica img,
-.vera img {
+.vera img,
+.kuca-katica img {
   margin-left: 32px;
 }
+.onama span {
+  font-weight: 600;
+  line-height: 32px;
+}
+.on-galerija {
+  margin-top: 80px;
+}
+.on-galerija logos {
+  width: 720px;
+  height: 480px;
+}
+
 .hero-g {
   background-image: url("../img/o-galeriji-hero.jpg");
 }
 .hero-s {
   background-image: url("../img/stalna-postavka-slika-hero.jpg");
+}
+
+/* mobilne verzije */
+
+@media (min-width: 767px) and (max-width: 991.98px) {
+  .on-galerija logos {
+    width: 350px;
+    height: 225px;
+  }
 }
