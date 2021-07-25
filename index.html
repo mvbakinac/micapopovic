@@ -73,7 +73,7 @@
     <meta name="twitter:card" content="http://micapopovic.rs/img/main1.jpg" />
     <meta name="twitter:creator" content="@http://www.twitter.com" />
   </head>
-  <body >
+  <body class="" >
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div
@@ -86,7 +86,36 @@
               alt="Стална поставка слика Миће Поповић и Вере Божичковић Поповић"
               class="logo"
           /></a>
-          <div class="tgl-switch"><img src="img/bars.png" alt="" /></div>
+          <div class="tgl-switch">
+            <img src="img/bars.png" class="open-nav" alt="Кликни" />
+            <img src="img/close-button.png" alt="Затвори" class="close-nav" />
+            
+          </div>
+          <div class="nav-list d-flex align-items-center justify-content-center flex-column ">
+            <ul class="navigacija">
+              <li class="nav-item " id="naslovna"><a href="index.html" class="nav-active">Насловна</a></li>
+              <li class="nav-item" id="postavka"><a href="stalna-postavka-slika.html">Стална поставка</a></li>
+              <li class="nav-item" id="virtuelna"><a href="">Виртуелна галерија</a></li>
+              <li class="nav-item" id="biografije"><a href="biografije.html">Биографије</a></li>
+              <li class="nav-item" id="onama"><a href="o-galeriji.html">О галерији</a></li>
+            </ul>
+            <div class="jezik">
+              <a href="" class="jezik-item nav-neactive">СР</a>
+              <a href="" class="jezik-item nav-active">ЕН</a>
+            </div>
+            <div class="nav-kontakt">
+              <p>015/881-151</p>
+              <p>centarkultureloznica@gmail.com</p>
+              <p>Јована Цвијића 15, Лозницa</p>
+            </div>
+            <div class="nav-soc">
+            <p>
+              <a href=""  target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+              
+            </p>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -268,10 +297,10 @@
         <section class="prijatelji ">
           <div class="container" id="prijatelji">
             <div class="logoi d-flex justify-content-between align-items-center">
-              <img src="img/sanu-logo2.png" alt="" />
-              <img src="img/muzej-grada-beograda2.png" alt="" />
-              <img src="img/ministarstvo_kulture2.png" alt="" />
-              <img src="img/logo2.png" alt="" />
+              <img src="img/sanu-logo2.png" class="frends" alt="" />
+              <img src="img/muzej-grada-beograda2.png" class="frends" alt="" />
+              <img src="img/ministarstvo_kulture2.png" class="frends" alt="" />
+              <img src="img/logo2.png" class="frends" alt="" />
             </div>
           </div>
         </section>
@@ -326,7 +355,9 @@
     </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
     <script src="js/custom.js"></script>
+    
     <!-- <script src="js/full-page-scroll.js"></script>
     <script type="text/javascript">
       new fullScroll({

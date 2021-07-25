@@ -75,8 +75,8 @@
     <meta name="twitter:card" content="http://micapopovic.rs/img/main1.jpg" />
     <meta name="twitter:creator" content="@http://www.twitter.com" />
   </head>
-  <body >
-    <header>
+  <body  style="opacity: 0;animation: opacityUp 1.2s ease 0.1s forwards;">
+     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div
           class="container-fluid"
@@ -86,8 +86,38 @@
             ><img
               src="img/лого.png"
               alt="Стална поставка слика Миће Поповић и Вере Божичковић Поповић"
+              class="logo"
           /></a>
-          <div class="tgl-switch"><img src="img/bars.png" alt="" /></div>
+          <div class="tgl-switch">
+            <img src="img/bars.png" class="open-nav" alt="Кликни" />
+            <img src="img/close-button.png" alt="Затвори" class="close-nav" />
+            
+          </div>
+          <div class="nav-list d-flex align-items-center justify-content-center flex-column ">
+            <ul class="navigacija">
+              <li class="nav-item " id="naslovna"><a href="index.html" >Насловна</a></li>
+              <li class="nav-item" id="postavka"><a href="stalna-postavka-slika.html">Стална поставка</a></li>
+              <li class="nav-item" id="virtuelna"><a href="">Виртуелна галерија</a></li>
+              <li class="nav-item" id="biografije"><a href="biografije.html">Биографије</a></li>
+              <li class="nav-item" id="onama"><a href="o-galeriji.html" class="nav-active">О галерији</a></li>
+            </ul>
+            <div class="jezik">
+              <a href="" class="jezik-item nav-neactive">СР</a>
+              <a href="" class="jezik-item nav-active">ЕН</a>
+            </div>
+            <div class="nav-kontakt">
+              <p>015/881-151</p>
+              <p>centarkultureloznica@gmail.com</p>
+              <p>Јована Цвијића 15, Лозницa</p>
+            </div>
+            <div class="nav-soc">
+            <p>
+              <a href=""  target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+              
+            </p>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -139,19 +169,25 @@
                   <img src="img/galerija2.png" class="img-fluid" alt="logo" style="display:inline">
               </div>
               <div class="logos text-center">
-                  <img src="img/galerija1.png" class="img-fluid" alt="logo" style="display:inline">
-              </div>
-              <div class="logos text-center">
                   <img src="img/galerija3.png" class="img-fluid" alt="logo" style="display:inline">
               </div>
               <div class="logos text-center">
-                  <img src="img/galerija2.png" class="img-fluid" alt="logo" style="display:inline">
+                  <img src="img/galerija4.jpg" class="img-fluid" alt="logo" style="display:inline">
               </div>
               <div class="logos text-center">
-                  <img src="img/galerija1.png" class="img-fluid" alt="logo" style="display:inline">
+                  <img src="img/galerija5.jpg" class="img-fluid" alt="logo" style="display:inline">
               </div>
               <div class="logos text-center">
-                  <img src="img/galerija1.png" class="img-fluid" alt="logo" style="display:inline">
+                  <img src="img/galerija6.jpg" class="img-fluid" alt="logo" style="display:inline">
+              </div>
+              <div class="logos text-center">
+                  <img src="img/galerija7.jpg" class="img-fluid" alt="logo" style="display:inline">
+              </div>
+              <div class="logos text-center">
+                  <img src="img/galerija8.jpg" class="img-fluid" alt="logo" style="display:inline">
+              </div>
+              <div class="logos text-center">
+                  <img src="img/galerija9.jpg" class="img-fluid" alt="logo" style="display:inline">
               </div>
            </div>
         </div>
@@ -209,6 +245,7 @@
     </main>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="owlcarousel/owl.carousel.js"></script>
     <!-- <script src="js/full-page-scroll.js"></script>
