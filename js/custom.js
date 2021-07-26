@@ -17,7 +17,7 @@ nav.addEventListener("click", function () {
 
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".navbar");
-  header.classList.toggle("black", window.scrollY > 400);
+  header.classList.toggle("black", window.scrollY > 240);
 });
 
 // scroll reveal start
@@ -47,6 +47,12 @@ sr.reveal(".logoi", {
   distance: "10px",
 });
 sr.reveal(".kontakt-div", {
+  origin: "bottom",
+  duration: 1500,
+  delay: 150,
+  distance: "10px",
+});
+sr.reveal(".scroll-sm", {
   origin: "bottom",
   duration: 1500,
   delay: 150,

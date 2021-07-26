@@ -79,8 +79,7 @@
      <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div
-          class="container-fluid"
-          style="padding-left: 36px; padding-right: 36px"
+          class="container-fluid pe-sm-2 ps-sm-2 pe-md-4 ps-md-4"
         >
           <a class="navbar-brand" href="index.html"
             ><img
@@ -130,10 +129,26 @@
 
         <!-- biografije start -->
         <section class="onama">
-            <div class="container">
+            <div class="container  ">
                 <div class="kuca-katica">
                     <h2>O галерији</h2>
-                    <img src="img/kuca katica.png" alt="Кућа Катића" class="float-end">
+                    <figure class="figure float-none float-lg-end ms-0 ms-lg-5">
+                        <img src="img/kuca katica.png" class="figure-img img-fluid  " alt="Кућа Катића">
+                        <figcaption class="figure-caption ">Кућа Катића</figcaption>
+                     </figure>
+                    <p class="d-block d-md-none">
+                      Oснована је 1989. године, на основу уговора о поклону склопљеног
+                      између дародавца Миће Поповића и општине Лозница. Свечано је
+                      отворена 28. Октобра 1989. године. Смештена је на спрату Куће
+                       Катића, у улици Јована Цвијића број 15 у Лозници.Кућа Катића је
+                      подигнута 1878. године као породична кућа за занатлију и трговца
+                       Марјана Катића, у духу историзма са класицистичким и декоративним
+                       елементима романтизма. Фасада је симетрично решена са наглашеним
+                      лучним главним улазом на средини, а са сатрана су по три ужа отвора.
+                      На спрату у средини је балкон са аутентичном гвозденом оградом. Све
+                      површине око прозора украшене су рељефима. Кућа је 1997. утврђена за
+                      споменик културе.
+                    </p>
                     <p>
                         Мића је пре отварања галерије видео простор и сам одабрао слике за њега. Та чињеница чини ову поставку још вреднијом. Почевши од слике „Чукундедина кућа у Лозници“ из 1936. године, када је Мића имао само тринаест година, преко репрезентативних дела као што су „Грађани“ или „Гвозденов графикон“, или неизоставни аутопортрет с леђа „Ја сам пао(у доњем граду – Албани, држава Њујорк)“, до слике „Велика мртва природа“ из 1989. године, имамо заиста један хронолошки след свих важних фаза из сликарства Миће Поповића. Мића Поповић је од свог првог сликарског корака, чим је стао пред штафелај, разумео сликарство као морални чин.
                     </p>
@@ -152,7 +167,7 @@
                     <p>
                       Мићина дела ће остати савремена и актуелна још дуго времена. Остварио је не само уметнички него и морални знак распознавања на лицу нашег времена. Имамо све разлоге да застанемо пред овим сликама, да проверимо њихове истине, да се потражимо у њима.
                     </p>
-                    <p class="mt-5">
+                    <p class="mt-5-md mt-3">
                       <span>Мр Снежана Нешковић Симић,<br>Управник Сталне поставке слика</span>
                     </p>
                 </div>
@@ -195,10 +210,23 @@
   </div>
         </section>
         <!-- biografije end -->
+         <!-- prijatelji galerije -->
+        <section class="prijatelji d-block d-sm-none pt-0 pb-5 ">
+          <div class="container" id="prijatelji">
+            <h2>Пријатељи галерије</h2>
+            <div class="logoi d-flex justify-content-between align-items-center flex-column">
+              <img src="img/sanu-logo2.png" class="frends mt-5" alt="" />
+              <img src="img/muzej-grada-beograda2.png" class="frends mt-5" alt="" />
+              <img src="img/ministarstvo_kulture2.png" class="frends mt-5" alt="" />
+              <img src="img/logo2.png" class="frends mt-5" alt="" />
+            </div>
+          </div>
+        </section>
+        <!-- prijatelji end -->
         <!-- kontakt start -->
         <section class="kontakt">
           <div class="container">
-            <div class="d-flex justify-content-between align-items-start">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-sm-start align-items-lg-start align-items-md-center">
               <div class="kontakt-div" id="adresa">
                 <h3>Aдреса</h3>
                 <p>Јована Цвијића 15, Лозницa</p>
@@ -218,6 +246,13 @@
                 <h3>Контакт</h3>
                 <p>centarkultureloznica@gmail.com</p>
                 <p>015/881-151</p>
+                <div class="d-block d-lg-none mt-5">
+            <p>
+              <a href=""  target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="" target="_blank"><i class="fas fa-envelope"></i></a>
+            </p>
+          </div>
               </div>
             </div>
           </div>
@@ -226,19 +261,17 @@
       
       <!-- FOOTER -->
       <footer class=" footer">
-        <!-- <p class="up"><a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a></p> -->
-        <div class="container d-flex flex-row justify-content-between align-items-center">
+        <div class=" container d-flex flex-row justify-content-between align-items-center">
           <p>
             &copy; <span>2021</span>: Центар за културу <span>„ВукКараџић“</span>. Сва права задржана.
           </p>
-          <div>
+          <div class="d-none d-lg-block me-5 me-md-0">
             <p>
               <a href=""  target="_blank"><i class="fab fa-facebook-f"></i></a>
               <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
               <a href="" target="_blank"><i class="fas fa-envelope"></i></a>
             </p>
           </div>
-          <!-- <p class=""><a href="#"><i class="fas fa-arrow-up fa-1x"></i></a></p> -->
         </div>
         <p class="up"><a href="#"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a></p>
       </footer>
