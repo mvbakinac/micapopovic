@@ -17,7 +17,9 @@ nav.addEventListener("click", function () {
 
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".navbar");
-  header.classList.toggle("black", window.scrollY > 240);
+  const logo = document.querySelector(".logo");
+  header.classList.toggle("black", window.scrollY > 60);
+  logo.classList.toggle("small-logo", window.scrollY > 60);
 });
 
 // scroll reveal start
@@ -70,7 +72,7 @@ $(document).ready(function () {
         items: 1,
         nav: true,
       },
-      767: {
+      576: {
         items: 2,
         nav: false,
       },

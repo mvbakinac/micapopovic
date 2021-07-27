@@ -15,12 +15,12 @@ html {
 }
 .black {
   background: var(--footer-color);
-  background: rgba(0, 0, 0, 0.85);
-  /* background: #411f1e; */
+  background: rgba(0, 0, 0, 0.8);
   border-bottom: none !important;
+  padding: 4px 0px 4px 0px;
 }
-.black-logo {
-  color: var(--kontakt-color);
+.small-logo {
+  width: 200px;
 }
 
 .container {
@@ -29,8 +29,7 @@ html {
 }
 
 /* header */
-header {
-}
+
 .tgl-switch {
   cursor: pointer;
   z-index: 3000;
@@ -48,6 +47,9 @@ header {
 .open .close-nav {
   display: block;
   color: #fff;
+}
+.navbar {
+  transition: all 0.3s ease;
 }
 
 .nav-list {
@@ -97,7 +99,7 @@ a.nav-active::after {
   position: absolute;
   top: 35px;
   left: 0;
-  height: 2px;
+  height: 1px;
   width: 100%;
   background-color: #fff;
   margin: 0 auto;
@@ -131,6 +133,10 @@ a.nav-active::after {
 
 .nav-neactive {
   color: rgba(255, 255, 255, 0.5);
+}
+.nav-neactive:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: underline;
 }
 
 .nav-kontakt {
@@ -211,7 +217,8 @@ a.nav-active::after {
   left: 0;
 }
 .carousel-item {
-  height: 100vh;
+  height: 100%;
+  max-height: 100vh;
 }
 .carousel-indicators,
 .carousel-control-prev,
@@ -247,12 +254,11 @@ a.nav-active::after {
   padding-top: 10px;
 }
 .carousel-caption h1 {
-  font-family: var(--title-font);
+  font-family: var(--p-font);
   font-size: 68px;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 6px;
-  margin-left: -6px;
   margin-bottom: 50px;
 }
 .btn-cta {
@@ -350,7 +356,7 @@ a.nav-active::after {
 }
 .tri-slike {
   margin-top: 80px;
-  padding-right: 60px;
+  padding-right: 85px;
   padding-bottom: 130px;
 }
 .tri-slike img {
@@ -599,6 +605,10 @@ a.nav-active::after {
   .kontakt {
     padding-bottom: 10px;
   }
+
+  .nav-list {
+    overflow: scroll;
+  }
   .navigacija li {
     margin-bottom: 25px;
   }
@@ -629,7 +639,7 @@ a.nav-active::after {
   .hero-b,
   .hero-g,
   .hero-s {
-    height: 240px;
+    height: 120px;
   }
   .kontakt-div p {
     font-size: 13px;
@@ -640,8 +650,8 @@ a.nav-active::after {
   }
   .up a {
     position: absolute;
-    top: -35px;
-    right: 10px;
+    top: 20px;
+    right: 4px;
   }
   .onama {
     padding-top: 20px;
@@ -676,11 +686,11 @@ a.nav-active::after {
   .section_sm {
     background: var(--grey-color-logo);
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
     background-size: cover;
     width: 100%;
     height: 100vh;
-    padding: 0px 0px 80px 24px;
+    padding: 0px 0px 80px 16px;
   }
   .section_sm_1 {
     background-image: url("../img/MAIN-SM-1.jpg");
@@ -697,12 +707,12 @@ a.nav-active::after {
   }
   .section_sm h1 {
     color: #fff;
-    font-family: var(--title-font);
-    font-size: 32px;
-    letter-spacing: 3px;
-    line-height: 36px;
+    font-family: var(--p-font);
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    line-height: 44px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 48px;
     opacity: 0;
     animation: fadeUp 0.8s ease 0.3s forwards;
@@ -711,12 +721,80 @@ a.nav-active::after {
     opacity: 0;
     animation: fadeUp 0.8s ease 0.3s forwards;
   }
+  .logoi img {
+    opacity: 1;
+  }
+  #prijatelji h2 {
+    margin-left: 25px;
+  }
+  .kontakt-div {
+    text-align: center;
+  }
+}
+@media (min-width: 576px) and (max-width: 766.98px) {
+  .nav-list {
+    overflow: scroll;
+    padding-top: 150px;
+  }
+  .navigacija {
+    margin-bottom: 8px;
+  }
+  .navigacija li {
+    margin-bottom: 10px;
+  }
+  .navigacija li a {
+    font-size: 16px;
+  }
+  a.nav-active::after {
+    top: 24px;
+    height: 1px;
+  }
+  .nav-kontakt p {
+    margin-bottom: 8px;
+  }
+  .jezik {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .section_sm_1 {
+    background-image: url("../img/MAIN-th-1.jpg");
+  }
+  .section_sm_2 {
+    background-image: url("../img/MAIN-th-2.jpg");
+  }
+  .section_sm_3 {
+    background-image: url("../img/MAIN-th-3.jpg");
+  }
+  .kontakt-div {
+    text-align: center;
+  }
+  .section_sm {
+    padding: 0px 0px 20px 24px;
+  }
+  .section_sm h1 {
+    margin-bottom: 24px;
+  }
+
+  .mica img,
+  .vera img,
+  .kuca-katica img {
+    width: 250px;
+  }
+  .hero-b,
+  .hero-g,
+  .hero-s {
+    height: 120px;
+  }
+  .up a {
+    top: 10px;
+  }
 }
 @media (min-width: 767px) and (max-width: 991.98px) {
   .on-galerija logos {
     width: 350px;
     height: 225px;
   }
+
   .kontakt-div {
     text-align: center;
     margin-bottom: 40px;
@@ -731,16 +809,16 @@ a.nav-active::after {
     width: 700px;
   }
   #img-2 {
-    width: 290px;
+    width: 270px;
   }
   #img-1 {
     width: 210px;
   }
   #img-3 {
-    width: 165px;
+    width: 145px;
   }
   .tri-slike {
-    padding-right: 0px;
+    padding-right: 65px;
   }
   .tri-slike #img-1 {
     top: 80px;
@@ -754,6 +832,23 @@ a.nav-active::after {
   .navigacija li a {
     font-size: 18px;
   }
+  .okvir {
+    width: 400px;
+  }
+  .carousel-caption h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .mica img,
+  .vera img,
+  .kuca-katica img {
+    width: 300px;
+  }
+  .hero-b,
+  .hero-g,
+  .hero-s {
+    height: 320px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .carousel-caption h1 {
@@ -762,28 +857,30 @@ a.nav-active::after {
   .o-galeriji #crtica {
     width: 900px;
   }
-  #img-2 {
-    width: 370px;
+  .tri-slike #img-2 {
+    width: 340px;
   }
   .tri-slike #img-1 {
     top: 80px;
+    width: 240px;
   }
   .tri-slike #img-3 {
     top: 80px;
+    width: 175px;
   }
-  #img-1 {
-    width: 270px;
-  }
-  #img-3 {
-    width: 220px;
-  }
+
   .tri-slike {
-    padding-right: 0px;
+    padding-right: 85px;
   }
   .navigacija li {
     margin-bottom: 40px;
   }
   .navigacija li a {
     font-size: 21px;
+  }
+  .hero-b,
+  .hero-g,
+  .hero-s {
+    height: 320px;
   }
 }
