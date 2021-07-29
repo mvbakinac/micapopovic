@@ -60,8 +60,15 @@ sr.reveal(".scroll-sm", {
   delay: 150,
   distance: "10px",
 });
+sr.reveal(".grid-item", {
+  origin: "bottom",
+  duration: 1500,
+  delay: 150,
+  distance: "20px",
+});
 
 // scroll reveal end
+
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
     loop: true,
@@ -86,6 +93,16 @@ $(document).ready(function () {
         nav: true,
         loop: false,
       },
+    },
+  });
+});
+
+$(document).ready(function () {
+  $(".img-galery-1").magnificPopup({
+    delegate: "a", // child items selector, by clicking on it popup will open
+    type: "image",
+    gallery: {
+      enabled: true,
     },
   });
 });

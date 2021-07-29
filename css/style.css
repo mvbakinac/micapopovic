@@ -356,7 +356,7 @@ a.nav-active::after {
 }
 .tri-slike {
   margin-top: 80px;
-  padding-right: 85px;
+  padding-right: 72px;
   padding-bottom: 130px;
 }
 .tri-slike img {
@@ -489,7 +489,7 @@ a.nav-active::after {
 .up a {
   position: absolute;
   top: 17px;
-  right: 15px;
+  right: 4px;
 }
 .up a {
   border: none;
@@ -524,8 +524,12 @@ a.nav-active::after {
 .onama {
   padding-bottom: 60px;
 }
+.sp-galerija {
+  padding: 64px 0px 120px 0px;
+}
 .biografije h2,
-.onama h2 {
+.onama h2,
+.sp-galerija h2 {
   margin-bottom: 50px;
   font-family: var(--title-font);
   font-size: 28px;
@@ -566,6 +570,35 @@ a.nav-active::after {
   background-image: url("../img/stalna-postavka-slika-hero.jpg");
 }
 
+/* stalna postavka */
+.grid {
+  padding-left: 12px !important;
+}
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+.grid-item {
+  width: calc(33.33% - 24px);
+  margin-bottom: 40px;
+}
+
+.grid-item p {
+  margin-top: 12px;
+  font-family: var(--p-font);
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.grid-item p span {
+  font-weight: 700;
+  font-size: 16px;
+}
+.sp-galerija .container {
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+}
 /* animacije */
 
 @keyframes fadeUp {
@@ -728,6 +761,10 @@ a.nav-active::after {
   .kontakt-div {
     text-align: center;
   }
+  .grid-item {
+    width: calc(100% - 24px);
+    margin-bottom: 50px;
+  }
 }
 @media (min-width: 576px) and (max-width: 766.98px) {
   .nav-list {
@@ -807,13 +844,13 @@ a.nav-active::after {
     width: 700px;
   }
   #img-2 {
-    width: 270px;
+    width: 260px;
   }
   #img-1 {
-    width: 210px;
+    width: 200px;
   }
   #img-3 {
-    width: 145px;
+    width: 140px;
   }
   .tri-slike {
     padding-right: 65px;
@@ -846,6 +883,10 @@ a.nav-active::after {
   .hero-g,
   .hero-s {
     height: 320px;
+  }
+  .grid-item {
+    width: calc(50% - 24px);
+    margin-bottom: 50px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
