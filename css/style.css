@@ -292,7 +292,7 @@ a.nav-active::after {
   text-align: center;
 }
 .o-galeriji .headline {
-  font-family: var(--title-font);
+  font-family: var(--p-font);
   font-size: 17px;
   color: #a5a5a5;
   letter-spacing: 1.7px;
@@ -502,7 +502,7 @@ a.nav-active::after {
 .hero-b,
 .hero-g,
 .hero-s {
-  height: 440px;
+  height: 320px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
