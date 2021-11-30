@@ -5,6 +5,7 @@
   --title-color: #444444;
   --red-button: #a14a27;
   --grey-color: #a5a5a5;
+  --grey-color-d: #717070;
   --grey-color-logo: #f5f5f4;
   --kontakt-color: #232323;
   --footer-color: #292828;
@@ -149,6 +150,12 @@ a.nav-active::after {
   font-size: 18px;
   font-weight: 200;
 }
+.nav-kontakt a {
+  text-decoration: none;
+}
+p.nav-mail {
+  color: #fff !important;
+}
 
 .nav-soc {
   opacity: 0;
@@ -210,7 +217,7 @@ a.nav-active::after {
 .overley {
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 100;
   position: absolute;
   top: 0;
@@ -228,7 +235,7 @@ a.nav-active::after {
 }
 .carousel-caption h1 {
   opacity: 0;
-  animation: fadeUp 0.8s ease 0.3s forwards;
+  animation: fadeUp 1.5s ease 0.5s forwards;
 }
 
 .carousel-caption a {
@@ -374,7 +381,11 @@ a.nav-active::after {
   right: 40px;
   z-index: 1000;
 }
-
+.prica_u_slikama {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: start; */
+}
 /* prijatelji */
 .prijatelji {
   background: var(--grey-color-logo);
@@ -382,7 +393,8 @@ a.nav-active::after {
 }
 
 .logoi img {
-  opacity: 0.4;
+  opacity: 0.6;
+  filter: saturate(0);
   cursor: pointer;
   -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
@@ -392,6 +404,7 @@ a.nav-active::after {
 }
 .logoi img:hover {
   opacity: 1;
+  filter: saturate(100%);
 }
 
 /* kontakt */
@@ -419,6 +432,13 @@ a.nav-active::after {
   font-size: 16px;
   font-weight: 200;
   letter-spacing: 0.45px;
+  transition: color 0.5s ease;
+}
+.kontakt-div a {
+  text-decoration: none;
+}
+.kontakt-div a:hover p {
+  color: #fff;
 }
 #radno-vreme p {
   line-height: 40px;
@@ -457,7 +477,7 @@ a.nav-active::after {
 }
 
 .footer a,
-#tel a {
+#mob-tel a {
   width: 36px;
   height: 36px;
   line-height: 35px;
@@ -577,10 +597,26 @@ a.nav-active::after {
 .grid-item img {
   width: 100%;
   height: auto;
+  filter: saturate(95%);
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.grid-item img:hover {
+  opacity: 1;
+  filter: saturate(125%);
+  -webkit-box-shadow: 1px 0px 18px 12px rgba(46, 46, 46, 0.4);
+  box-shadow: 1px 0px 18px 12px rgba(46, 46, 46, 0.4);
 }
 .grid-item {
-  width: calc(33.33% - 24px);
+  /* width: calc(33.33% - 24px); */
+  width: calc(25% - 20px);
   margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+  /* width: calc(33.33% - 20px); */
+  width: calc(25% - 16px);
 }
 
 .grid-item p {
@@ -595,10 +631,122 @@ a.nav-active::after {
   font-weight: 700;
   font-size: 16px;
 }
+.grid-item-img {
+  position: relative;
+}
+
 .sp-galerija .container {
   padding-left: 28px !important;
   padding-right: 28px !important;
 }
+
+/* modal */
+.Modal {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #fff;
+  overflow: auto;
+  display: none;
+}
+
+.modal-div {
+  padding: 100px 140px;
+}
+
+.Modal .text {
+  padding-top: 100px;
+  flex: 30%;
+  padding-left: 25px;
+}
+.Modal .text h1 {
+  color: #444;
+  font-family: var(--p-font);
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: 0.4px;
+}
+.Modal .text p {
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 17px;
+  font-family: var(--p-font);
+  letter-spacing: 0.7px;
+  margin-bottom: 8px;
+}
+.Modal .text h5 {
+  font-size: 18px;
+  font-family: var(--p-font);
+  letter-spacing: 0.7px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.Modal .slika {
+  flex: 70%;
+}
+.Modal .slika .mySlides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Modal .slika img {
+  max-height: 75vh;
+  max-width: 90%;
+  -webkit-box-shadow: 8px 10px 16px 9px rgba(0, 0, 0, 0.73);
+  box-shadow: 8px 10px 16px 9px rgba(0, 0, 0, 0.73);
+  display: block;
+  margin: 0 auto;
+}
+#modal-close {
+  width: 18px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  cursor: pointer;
+  z-index: 3000;
+}
+.prev-div,
+.next-div {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 2000;
+  cursor: pointer;
+  height: 100vh;
+  transition: all 0.5s ease;
+}
+.next-div {
+  right: 0px;
+  padding: 0 50px 0 70px;
+}
+.next-div:hover {
+  background: rgba(221, 221, 221, 0.3);
+}
+.prev-div {
+  left: 0px;
+  padding: 0 70px 0 50px;
+}
+.prev-div:hover {
+  background: rgba(221, 221, 221, 0.3);
+}
+/* .mySlides {
+  opacity: 0;
+  animation: opacityUp 1s ease 0.1s forwards;
+} */
+.numbertext {
+  font-family: var(--title-font);
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--grey-color-d);
+  position: absolute;
+  top: 90%;
+  left: 82%;
+}
+
 /* animacije */
 
 @keyframes fadeUp {
@@ -729,10 +877,10 @@ a.nav-active::after {
     background-image: url("../img/MAIN-SM-1.jpg");
   }
   .section_sm_2 {
-    background-image: url("../img/MAIN-SM-2.jpg");
+    background-image: url("../img/MAIN-SM-3.jpg");
   }
   .section_sm_3 {
-    background-image: url("../img/MAIN-SM-3.jpg");
+    background-image: url("../img/MAIN-SM-2.jpg");
   }
   .section_sm_1 a {
     opacity: 0;
@@ -757,13 +905,66 @@ a.nav-active::after {
   .logoi img {
     opacity: 1;
   }
-
   .kontakt-div {
     text-align: center;
   }
   .grid-item {
     width: calc(100% - 24px);
     margin-bottom: 50px;
+  }
+  .grid-item:hover {
+    width: calc(100% - 16px);
+  }
+  .modal-div {
+    padding: 40px 30px;
+  }
+  .Modal .slika,
+  .Modal .text {
+    flex: 100%;
+  }
+  .Modal .slika img {
+    max-height: 70vh;
+    max-width: 100%;
+  }
+  .Modal .text {
+    padding-top: 25px;
+    text-align: center;
+  }
+  h1#slikar {
+    margin-top: 5px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    letter-spacing: 0px;
+  }
+  h5#ime-slike {
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+  p#tehnika,
+  p#dimenzije {
+    margin-bottom: 4px;
+    line-height: 18px;
+    font-size: 14px;
+  }
+  .prev-div {
+    padding: 0px 0px 0px 8px;
+  }
+
+  .next-div {
+    padding: 0px 8px 0px 0px;
+  }
+  .prev-div:hover,
+  .next-div:hover {
+    background: transparent;
+  }
+  #modal-close {
+    top: 10px;
+    right: 15px;
+  }
+  .numbertext {
+    font-size: 16px;
+    left: 78%;
+    top: 95%;
   }
 }
 @media (min-width: 576px) and (max-width: 766.98px) {
@@ -787,6 +988,7 @@ a.nav-active::after {
   .nav-kontakt p {
     margin-bottom: 8px;
   }
+
   .jezik {
     margin-bottom: 20px;
     margin-top: 10px;
@@ -888,6 +1090,50 @@ a.nav-active::after {
     width: calc(50% - 24px);
     margin-bottom: 50px;
   }
+  .grid-item:hover {
+    width: calc(50% - 20px);
+  }
+  .modal-div {
+    padding: 40px 40px;
+  }
+  .Modal .slika,
+  .Modal .text {
+    flex: 100%;
+  }
+  .Modal .slika img {
+    max-height: 70vh;
+    max-width: 95%;
+  }
+  .Modal .text {
+    padding-top: 25px;
+    text-align: center;
+  }
+  h1#slikar {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 21px;
+  }
+  h5#ime-slike {
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
+  p#tehnika,
+  p#dimenzije {
+    margin-bottom: 4px;
+    line-height: 21px;
+    font-size: 16px;
+  }
+  .prev-div {
+    padding: 0px 0px 0px 20px;
+  }
+
+  .next-div {
+    padding: 0px 20px 0px 0px;
+  }
+  .prev-div:hover,
+  .next-div:hover {
+    background: transparent;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .carousel-caption h1 {
@@ -907,7 +1153,6 @@ a.nav-active::after {
     top: 80px;
     width: 175px;
   }
-
   .tri-slike {
     padding-right: 85px;
   }
@@ -921,5 +1166,46 @@ a.nav-active::after {
   .hero-g,
   .hero-s {
     height: 320px;
+  }
+  .modal-div {
+    padding: 40px 40px;
+  }
+  .Modal .slika,
+  .Modal .text {
+    flex: 100%;
+  }
+  .Modal .slika img {
+    max-height: 70vh;
+    max-width: 95%;
+  }
+  .Modal .text {
+    padding-top: 25px;
+    text-align: center;
+  }
+  h1#slikar {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 21px;
+  }
+  h5#ime-slike {
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
+  p#tehnika,
+  p#dimenzije {
+    margin-bottom: 4px;
+    line-height: 21px;
+    font-size: 16px;
+  }
+  .prev-div {
+    padding: 0px 0px 0px 20px;
+  }
+
+  .next-div {
+    padding: 0px 20px 0px 0px;
+  }
+  .prev-div:hover,
+  .next-div:hover {
+    background: transparent;
   }
 }
